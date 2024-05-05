@@ -11,6 +11,10 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 add_executable(work prgist.cpp)
 
+find_package(Qt5Windgets REQUIRED_FILES)
+add_executable(tddProject main.cpp)
+target_link_libraries(${PROJECT_NAME} Qt5::Widgets)
+
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY   ${CMAKE_BINARY_DIR}/${PROJECT_NAME}/binaries)
 
 if(UNIX)
